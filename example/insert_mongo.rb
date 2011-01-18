@@ -15,6 +15,7 @@ UserStreamReceiver.new.run{|chunk|
   data = JSON.parse(chunk)
   coll_key = data['friends'] ? 'friends'
   : data['event'] ? 'event'
+  : data['delete'] ? 'delete'
   : 'status'
   db.collection(coll_key).insert(data)
 
