@@ -22,7 +22,7 @@ This command dumps UserStream and inserts records to MongoDB.
 == Requirement
 
  * oauth-cli-twitter
- * mongo (to run example)
+ * mongo (to run MongoDB example)
 
 == Install
 
