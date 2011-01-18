@@ -5,13 +5,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{user-stream-receiver}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hitode909"]
   s.date = %q{2011-01-18}
   s.description = %q{User Stream Receiver.}
   s.email = %q{hitode909@gmail.com}
+  s.executables = ["user-stream-receiver", "user-stream-receiver-insert-mongo"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -25,8 +26,8 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "example/insert_mongo.rb",
-    "example/print.rb",
+    "bin/user-stream-receiver",
+    "bin/user-stream-receiver-insert-mongo",
     "lib/user-stream-receiver.rb",
     "spec/spec_helper.rb",
     "spec/user-stream-receiver_spec.rb",
