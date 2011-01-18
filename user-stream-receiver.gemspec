@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{user-stream-receiver}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hitode909"]
@@ -20,13 +20,17 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "example/insert_mongo.rb",
+    "example/print.rb",
     "lib/user-stream-receiver.rb",
     "spec/spec_helper.rb",
-    "spec/user-stream-receiver_spec.rb"
+    "spec/user-stream-receiver_spec.rb",
+    "user-stream-receiver.gemspec"
   ]
   s.homepage = %q{http://github.com/hitode909/user-stream-receiver}
   s.licenses = ["MIT"]
