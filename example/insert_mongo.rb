@@ -7,16 +7,17 @@ require 'mongo'
 include Mongo
 
 db   = Connection.new.db('twitter')
-db.collection('status').remove
-db.collection('friends').remove
-db.collection('event').remove
+# db.collection('status').remove
+# db.collection('friends').remove
+# db.collection('event').remove
 
 UserStreamReceiver.new.run{|chunk|
   data = JSON.parse(chunk)
-  p data
   coll_key = data['friends'] ? 'friends'
   : data['event'] ? 'event'
   : 'status'
   db.collection(coll_key).insert(data)
+
+  p data
   p coll_key
 }
