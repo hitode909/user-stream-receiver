@@ -1,4 +1,9 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
+#!/usr/bin/env ruby
+#
+#  Created by hitode909 on 2011-1-18.
+#  Copyright (c) 2011. All rights reserved.
+
+require 'rubygems'
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 require 'user-stream-receiver'
