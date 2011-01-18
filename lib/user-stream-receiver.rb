@@ -1,5 +1,5 @@
-require 'oauth/cli/twitter'
 require 'logger'
+require 'oauth/cli/twitter'
 
 class UserStreamReceiver
   include OAuth::CLI::Twitter
@@ -17,7 +17,6 @@ class UserStreamReceiver
       end
     }
   end
-
 
   protected
   ENDPOINT = URI.parse('https://userstream.twitter.com/2/user.json')
