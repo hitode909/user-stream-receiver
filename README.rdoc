@@ -9,6 +9,14 @@
           p JSON.parse(chunk)
         }
 
+or, use your AccessToken.
+
+        access_token = OAuth::AccessToken.new(....)
+
+        UserStreamReceiver.new_from_access_token(access_token).run{|chunk|
+          p JSON.parse(chunk)
+        }
+
 == Run examples
 
         % user-stream-receiver
