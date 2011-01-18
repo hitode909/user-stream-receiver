@@ -1,8 +1,6 @@
-user-stream-receiver
-====================
+= user-stream-receiver
 
-usage
-=====
+== Usage
 
         require 'user-stream-receiver'
         require 'json'
@@ -10,6 +8,25 @@ usage
         UserStreamReceiver.new.run{|chunk|
           p JSON.parse(chunk)
         }
+
+== Run examples
+
+        % user-stream-receiver
+
+This command dumps UserStream.
+
+        % user-stream-receiver-insert-mongo
+
+This command dumps UserStream and inserts records to MongoDB.
+
+== Requirement
+
+ * oauth-cli-twitter
+ * mongo (to run example)
+
+== Install
+
+        gem install user-stream-receiver
 
 == Copyright
 
