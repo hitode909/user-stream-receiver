@@ -1,0 +1,18 @@
+user-stream-receiver
+====================
+
+usage
+=====
+
+        require 'user-stream-receiver'
+        require 'json'
+
+        UserStreamReceiver.new.run{|chunk|
+          p JSON.parse(chunk)
+        }
+
+== Copyright
+
+Copyright (c) 2011 hitode909. See LICENSE.txt for
+further details.
+
