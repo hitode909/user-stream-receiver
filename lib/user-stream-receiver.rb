@@ -7,6 +7,20 @@ class UserStreamReceiver
   CONSUMER_TOKEN = 'kHOuxYqXSINzOW3UzEqEcA'
   CONSUMER_SECRET = 'x6dzx1oFjgDrtJSM2v8YYEYhyN2LnB1zUOeNo9Y'
 
+  attr_accessor :pit_file
+
+  def initialize(pit_file = 'user-stream-receiver')
+    @pit_file = pit_file
+  end
+
+  def new_from_access_token(access_token)
+    @access_token = access_token
+  end
+
+  def access_token
+    @access_token ||= self.get_access_token(:pit => @pit_file)
+  end
+
   def run(&block)
     loop {
       begin
@@ -20,10 +34,6 @@ class UserStreamReceiver
 
   protected
   ENDPOINT = URI.parse('https://userstream.twitter.com/2/user.json')
-
-  def access_token
-    @access_token ||= self.get_access_token(:pit => 'user-stream-receiver')
-  end
 
   def logger
     @logger ||= Logger.new(STDOUT)
