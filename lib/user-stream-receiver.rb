@@ -8,13 +8,16 @@ class UserStreamReceiver
   CONSUMER_SECRET = 'x6dzx1oFjgDrtJSM2v8YYEYhyN2LnB1zUOeNo9Y'
 
   attr_accessor :pit_file
+  attr_accessor :access_token
 
   def initialize(pit_file = 'user-stream-receiver')
     @pit_file = pit_file
   end
 
-  def new_from_access_token(access_token)
-    @access_token = access_token
+  def self.new_from_access_token(access_token)
+    me = self.new
+    me.access_token = access_token
+    me
   end
 
   def access_token
