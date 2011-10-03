@@ -4,9 +4,6 @@ require 'oauth/cli/twitter'
 class UserStreamReceiver
   include OAuth::CLI::Twitter
 
-  CONSUMER_TOKEN = 'kHOuxYqXSINzOW3UzEqEcA'
-  CONSUMER_SECRET = 'x6dzx1oFjgDrtJSM2v8YYEYhyN2LnB1zUOeNo9Y'
-
   attr_accessor :pit_file
   attr_accessor :access_token
 
