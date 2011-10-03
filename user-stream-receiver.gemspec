@@ -5,14 +5,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{user-stream-receiver}
-  s.version = "0.5.0"
+  s.version = "0.5.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["hitode909"]
-  s.date = %q{2011-01-24}
+  s.authors = [%q{hitode909}]
+  s.date = %q{2011-10-03}
   s.description = %q{User Stream Receiver.}
   s.email = %q{hitode909@gmail.com}
-  s.executables = ["user-stream-receiver", "user-stream-receiver-insert-mongo"]
+  s.executables = [%q{user-stream-receiver-insert-mongo}, %q{user-stream-receiver}]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -34,9 +34,9 @@ Gem::Specification.new do |s|
     "user-stream-receiver.gemspec"
   ]
   s.homepage = %q{http://github.com/hitode909/user-stream-receiver}
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.6}
   s.summary = %q{User Stream Receiver}
   s.test_files = [
     "spec/spec_helper.rb",
@@ -44,7 +44,6 @@ Gem::Specification.new do |s|
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
