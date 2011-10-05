@@ -3,6 +3,7 @@
 #  Created by hitode909 on 2011-1-18.
 #  Copyright (c) 2011. All rights reserved.
 
+require 'time'
 require 'rubygems'
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
@@ -22,6 +23,11 @@ UserStreamReceiver.new.run{|chunk|
   : data['event'] ? 'event'
   : data['delete'] ? 'delete'
   : 'status'
+
+  [data, data['source'], data['target'], data['target_object']].each do |h|
+    h['created_at'] = Time.parse(h['created_at']) if h && h['created_at']
+  end
+
   db.collection(coll_key).insert(data)
 
   p data
